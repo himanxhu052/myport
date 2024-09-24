@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projects - Himanshu Upadhyay</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-white text-gray-900 font-sans">
+
+  <!-- Header Section -->
+  <header class="bg-white shadow-md sticky top-0 z-50 transition-all duration-500 ease-in-out">
+    <nav class="container mx-auto flex justify-between items-center py-4">
+      <h1 class="text-2xl font-bold text-gray-800 transition duration-300">MyPortfolio</h1>
+      <ul class="flex space-x-6">
+        <li><a href="index.html" class="hover:text-blue-500">Home</a></li>
+        <li><a href="project.html" class="hover:text-blue-500">Projects</a></li>
+        <li><a href="contact.html" class="hover:text-blue-500">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="container mx-auto py-12">
+    <h3 class="text-4xl font-bold text-center mb-10 text-gray-800">Projects</h3>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <!-- Project Card -->
+      <div class="bg-white shadow p-6 rounded-lg project-card border-t-4 border-blue-500">
+        <h4 class="text-2xl font-semibold mb-4 text-gray-700">Retrieve It - Decentralized Platform</h4>
+        <p class="mb-4 text-gray-600">A blockchain-powered Lost & Found system that incentivizes honesty through cryptocurrency rewards.</p>
+        <a href="#" class="text-blue-500 hover:underline">View Project</a>
+      </div>
+      <!-- Another Project Card -->
+      <div class="bg-white shadow p-6 rounded-lg project-card border-t-4 border-green-500">
+        <h4 class="text-2xl font-semibold mb-4 text-gray-700">Project Title 2</h4>
+        <p class="mb-4 text-gray-600">Brief description of the project goes here.</p>
+        <a href="#" class="text-blue-500 hover:underline">View Project</a>
+      </div>
+      <!-- Add more project cards as needed -->
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-white py-6 text-center">
+    <p>&copy; 2024 MyPortfolio. All Rights Reserved.</p>
+  </footer>
+
+  <!-- Smooth transition script -->
+  <script>
+    // Smooth transition for page links
+    const links = document.querySelectorAll('.page-link');
+
+    links.forEach(link => {
+      link.addEventListener('click', function(e) {
+        e.preventDefault(); // Prevent default anchor click behavior
+        const targetUrl = this.getAttribute('href');
+
+        // Fade out the main content
+        document.body.classList.add('fade-out');
+        setTimeout(() => {
+          window.location.href = targetUrl; // Redirect after fading out
+        }, 500); // Delay to allow fading out
+      });
+    });
+  </script>
+</body>
+</html>
